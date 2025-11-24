@@ -1,15 +1,23 @@
-const bar = document.getElementById('bar');
-const close = document.getElementById('close');
-const nav = document.getElementById('navbar');
+// script.js - navbar open/close (clean, no duplicates)
+const bar = document.getElementById('bar');       // open button (hamburger)
+const closeBtn = document.getElementById('close'); // close icon inside nav
+const navbar = document.getElementById('navbar'); // nav panel element
 
 if (bar) {
-    bar.addEventListener('click',()=>{
-        nav.classList.add('active');
-    })
+    bar.addEventListener('click', () => {
+        navbar.classList.add('active');
+    });
 }
-    
-if (close) {
-    close.addEventListener('click',()=>{
-        nav.classList.remove('active');
-    })
+
+if (closeBtn) {
+    closeBtn.addEventListener('click', () => {
+        navbar.classList.remove('active');
+    });
 }
+
+// optional enhancement: close menu when clicking outside (for better UX)
+document.addEventListener('click', function(e){
+    if (navbar && bar && !navbar.contains(e.target) && !bar.contains(e.target)) {
+        navbar.classList.remove('active');
+    }
+});
