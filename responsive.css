@@ -1,258 +1,387 @@
-/* 
-@media (max-width: 1024px) {
-
-    .container {
-        width: 95%;
-    }
-
-    header {
-        padding: 15px 20px;
-    }
-
-    .navbar {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        width: 100%;
-        background: #ffffff;
-        padding: 15px 0;
-        text-align: center;
-    }
-
-    .navbar.active {
-        display: flex;
-    }
-
-    .navbar ul {
-        flex-direction: column;
-        gap: 20px;
-        width: 100%;
-    }
-
-    .products {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 18px;
-    }
-
-    .product-card {
-        padding: 15px;
-    }
-
-    .product-card h3 {
-        font-size: 20px;
-    }
-
-    .product-card p {
-        font-size: 14px;
-    }
-
-    footer {
-        text-align: center;
-        padding: 25px 15px;
-        font-size: 14px;
-    }
+* {
+    box-sizing: border-box;
+}
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
 }
 
-
-@media (max-width: 480px) {
-
-    .products {
-        grid-template-columns: 1fr;
-    }
-
-    .product-card {
-        padding: 12px;
-    }
-
-    h1, h2, h3 {
-        font-size: 22px;
-    }
-
-    footer p {
-        font-size: 12px;
-    }
+/* ===========================================
+   BASE FONT SCALING (TABLETS)
+=========================================== */
+@media (max-width: 1024px){
+  body { font-size: 16px; }
+  h1 { font-size: 36px; }
+  h2 { font-size: 30px; }
+  h4 { font-size: 18px; }
+  p  { font-size: 15px; }
 }
 
+/* ===========================================
+   iPad Mini / Tablets Portrait 768px ↓
+=========================================== */
+@media (max-width: 768px){
 
-@media (max-width: 768px) {
-    .cart-items {
-        display: flex;
-        flex-direction: column;
-        gap: 18px;
-    }
-
-    .cart-item {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 12px;
-        padding: 15px;
-    }
-
-    .cart-summary {
-        width: 100%;
-        margin-top: 20px;
-    }
-} */
-
-/* ============================
-  responsive.css
-  Target: iPad Mini 768×1024 (portrait) + landscape + phones
-  Keeps your original look — only makes layout responsive
-   ============================ */
-
-*{box-sizing:border-box;}
-html,body{width:100%;overflow-x:hidden;-webkit-font-smoothing:antialiased;}
-
-@media (max-width:1024px){
-  body{font-size:16px;}
-  h1{font-size:36px;}
-  h2{font-size:30px;}
-  h4{font-size:18px;}
-  p{font-size:15px;}
-}
-
-/* ---------------------------
-   iPad Mini portrait & small tablets (<=768px)
-   Primary target: 768x1024
-   --------------------------- */
-@media (max-width:768px){
-
-  /* Header */
+  /* ------- HEADER ------- */
   #header{
-    padding:12px 18px;
-    position:sticky;
-    top:0;
-    z-index:999;
+    padding: 12px 18px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     background: #e3e6f3;
   }
-  .logo{width:44px;height:auto;}
 
-  /* Navbar - slide-in panel */
+  .logo { width: 44px; height: auto; }
+
+  /* NAVBAR RIGHT PANEL */
   #navbar{
-    display:flex;
-    flex-direction:column;
-    align-items:stretch;
-    padding:12px 10px;
-    position:fixed;
-    top:0;
-    right:-280px;
-    height:100vh;
-    width:280px;
-    background:#e3e6f3;
-    box-shadow:0 30px 60px rgba(0,0,0,0.12);
-    transition:right .4s ease;
-    z-index:999;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: fixed;
+    top: 0;
+    right: -280px;
+    height: 100vh;
+    width: 280px;
+    background: #e3e6f3;
+    padding: 20px;
+    transition: right .4s ease;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.18);
+    z-index: 2000;
   }
-  #navbar.active{ right:0; }
-  #navbar li{ margin:14px 0; }
-  #navbar li a{ display:block; padding:10px 12px; font-size:18px; }
 
-  /* Mobile menu icons */
-  #mobile{ display:flex; align-items:center; gap:12px; }
-  #close{ display:block; position:absolute; top:18px; left:18px; font-size:26px; cursor:pointer; }
-  #lg-bag{ display:none; }
+  #navbar.active { right: 0; }
 
-  /* Hero section */
+  #navbar li{
+    width: 100%;
+    margin: 14px 0;
+  }
+  #navbar li a{
+    width: 100%;
+    display: block;
+    padding: 12px 0;
+    font-size: 18px;
+  }
+
+  #close{
+    display: block;
+    position: absolute;
+    font-size: 28px;
+    top: 18px;
+    left: 18px;
+    cursor: pointer;
+  }
+
+  #lg-bag { display: none; }
+
+  /* MOBILE ICONS */
+  #mobile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  /* ------- HERO SECTION ------- */
   #hero{
-    height:auto;
-    padding:36px 18px;
-    background-position:top center;
-    box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.18);
-    text-align:center;
-    align-items:center;
+    padding: 40px 18px;
+    text-align: center;
+    background-position: center top;
   }
-  #hero h1{ font-size:34px; color:#088178; }
-  #hero h4{ font-size:16px; margin-bottom:12px; }
-  #hero button{ padding:10px 22px; font-size:16px; border-radius:12px; }
-
-  /* Feature boxes */
-  #feature{ gap:12px; justify-content:center; padding:12px; }
-  .fe-box{ width:140px; padding:12px; }
-
-  /* Product grid: 2 columns */
-  #product1 .pro-container{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:16px;
-    padding:16px;
-    align-items:start;
+  #hero h1 { font-size: 34px; color: #088178; }
+  #hero h4 { font-size: 16px; }
+  #hero button{
+    padding: 10px 22px;
+    font-size: 16px;
+    border-radius: 12px;
   }
+
+  /* ------- FEATURES ------- */
+  #feature{
+    padding: 12px;
+    gap: 14px;
+    justify-content: center;
+  }
+  .fe-box{
+    width: 140px;
+    padding: 12px;
+  }
+
+  /* ------- PRODUCT GRID (2 Columns) ------- */
+  #product1 .pro-container {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 16px;
+    padding: 18px;
+  }
+
   #product1 .pro{
-    width:100%;
-    padding:12px;
-    border-radius:16px;
-    margin:0;
-    box-shadow:0 6px 18px rgba(0,0,0,0.04);
+    width: 100%;
+    padding: 12px;
+    border-radius: 16px;
   }
+
   #product1 .pro img{
-    width:100%;
-    height:220px;
-    object-fit:cover;
-    border-radius:12px;
-    transition:transform .4s;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 14px;
   }
-  #product1 .pro img:hover{ transform:none; } /* disable big scaling on small screens */
 
-  /* Banners */
-  #banner,#sm-banner{ padding:16px; height:auto; background-position:center; }
-  #sm-banner .banner-box,#sm-banner .banner-box2{ min-width:100%; height:180px; padding:16px; margin-bottom:12px; }
+  /* ------- BANNERS ------- */
+  #banner,
+  #sm-banner{
+    padding: 16px;
+    background-position: center;
+  }
 
-  /* Product detail stack */
-  #prodetails{ display:flex; flex-direction:column; padding:14px; gap:12px; }
-  #prodetails .single-pro-image{ width:100%; margin-right:0; }
-  #MainImg{ width:100%; height:420px; object-fit:cover; border-radius:10px; }
-  #prodetails .single-pro-details{ width:100%; padding-top:6px; }
+  #sm-banner .banner-box,
+  #sm-banner .banner-box2{
+    width: 100%;
+    height: 180px;
+    padding: 18px;
+    margin-bottom: 14px;
+  }
 
-  /* Cart -> stacked rows */
-  #cart table{ display:block; width:100%; border-collapse:collapse; }
-  #cart table thead,#cart table tbody,#cart table tr{ display:block; width:100%; }
-  #cart table tr{ margin-bottom:12px; border-bottom:1px solid #eee; padding-bottom:12px; }
-  #cart table td{ display:block; text-align:left; padding:6px 0; width:100%; }
-  #cart table img{ width:90px; height:auto; display:inline-block; }
+  /* ------- PRODUCT DETAILS PAGE ------- */
+  #prodetails{
+    display: flex;
+    flex-direction: column;
+    padding: 14px;
+    gap: 16px;
+  }
 
-  /* Coupon & subtotal stacked */
-  #coupon,#subtotal{ width:100%; padding:12px; box-sizing:border-box; margin-bottom:12px; }
+  #prodetails .single-pro-image{
+    width: 100%;
+  }
 
-  /* Newsletter & footer */
-  #newsletter{ padding:20px; background-position:center; }
-  #newsletter .form{ width:100%; gap:8px; flex-direction:column; }
-  footer{ padding:20px 12px; flex-direction:column; align-items:center; text-align:center; gap:12px; }
-  footer .col{ width:100%; align-items:center; }
+  #MainImg{
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 12px;
+  }
 
-  /* General spacing */
-  .section-p1{ padding:16px; }
-  .section-m1{ margin:12px; }
+  #prodetails .single-pro-details{
+    width: 100%;
+  }
+
+  /* ------- CART PAGE ------- */
+  #cart table{
+    width: 100%;
+    display: block;
+  }
+  #cart table tr{
+    display: block;
+    width: 100%;
+    margin-bottom: 14px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+  }
+  #cart table td{
+    display: block;
+    padding: 6px 0;
+  }
+  #cart table img{
+    width: 90px;
+    height: auto;
+  }
+
+  #coupon,
+  #subtotal{
+    width: 100%;
+    margin-bottom: 14px;
+    padding: 12px;
+  }
+
+  /* ------- FOOTER ------- */
+  #newsletter{ padding: 20px; }
+  #newsletter .form{
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  footer{
+    padding: 20px 14px;
+    text-align: center;
+  }
+  footer .col{
+    width: 100%;
+    margin-bottom: 16px;
+  }
+
+  .section-p1{ padding: 16px; }
+  .section-m1{ margin: 12px; }
 }
 
-/* ---------------------------
-   iPad Mini landscape / small laptops (769 - 1024)
-   --------------------------- */
-@media (min-width:769px) and (max-width:1024px){
-  #header{ padding:16px 28px; }
-  .logo{ width:48px; }
-  #navbar{ display:flex; flex-direction:row; gap:18px; align-items:center; position:static; height:auto; width:auto; background:transparent; box-shadow:none; padding:0; }
-  #mobile{ display:none; }
-  #product1 .pro-container{ display:grid; grid-template-columns:repeat(3,1fr); gap:20px; padding:20px; }
-  #product1 .pro img{ height:300px; object-fit:cover; }
-  #prodetails{ display:flex; gap:20px; align-items:flex-start; }
-  #prodetails .single-pro-image{ width:45%; }
-  #prodetails .single-pro-details{ width:55%; }
-  #cart table td{ text-align:center; padding:12px 6px; }
-  footer{ padding:24px 28px; }
+/* ===========================================
+   Tablets Landscape 769–1024px
+=========================================== */
+@media (min-width: 769px) and (max-width: 1024px){
+  #header{ padding: 16px 28px; }
+  .logo{ width: 48px; }
+
+  #navbar{
+    display: flex;
+    gap: 22px;
+    align-items: center;
+    position: static;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  #mobile{ display: none; }
+
+  #product1 .pro-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 22px;
+    padding: 20px;
+  }
+
+  #product1 .pro img{ height: 300px; }
+
+  #prodetails{
+    display: flex;
+    gap: 24px;
+  }
+  #prodetails .single-pro-image{ width: 45%; }
+  #prodetails .single-pro-details{ width: 55%; }
+
+  footer{ padding: 24px 28px; }
 }
 
-/* ---------------------------
-   small phones
-   --------------------------- */
-@media (max-width:420px){
-  #product1 .pro-container{ grid-template-columns:1fr; padding:12px; gap:14px; }
-  #hero h1{ font-size:28px; }
-  #MainImg{ height:280px; }
-  #product1 .pro img{ height:240px; }
+/* ===========================================
+   SMALL PHONES 420px ↓
+=========================================== */
+@media (max-width: 420px){
+  #product1 .pro-container{
+    grid-template-columns: 1fr;
+    gap: 14px;
+    padding: 12px;
+  }
+  #product1 .pro img{ height: 240px; }
+
+  #hero h1{ font-size: 28px; }
+  #MainImg{ height: 280px; }
 }
 
+/* ============================================
+   FINAL FIX PACK – iPad Mini 768x1024 + Phones
+   ============================================ */
+
+@media (max-width: 768px) {
+
+  /* Fix header double mobile div issue */
+  #mobile {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    display: flex;
+    gap: 15px;
+  }
+
+  #mobile i {
+    font-size: 26px;
+    cursor: pointer;
+  }
+
+  /* Make navbar come clean */
+  #navbar {
+    padding-top: 60px !important;
+    backdrop-filter: blur(12px);
+    background: rgba(227, 230, 243, 0.98) !important;
+  }
+
+  /* Fix menu items size */
+  #navbar li a {
+    font-size: 20px !important;
+    font-weight: 600;
+    color: #000;
+    padding: 12px 0;
+  }
+
+  /* Close button inside nav */
+  #close {
+    display: block !important;
+    color: #000;
+    font-size: 28px;
+  }
+
+  /* Fix hero section */
+  #hero {
+    background-size: cover !important;
+    background-position: center !important;
+    padding: 30px;
+    text-align: center;
+  }
+
+  #hero h1 {
+    font-size: 32px !important;
+    color: #088178;
+    font-weight: 700;
+  }
+
+  /* Fix feature boxes spacing */
+  #feature {
+    padding: 10px;
+    gap: 10px;
+  }
+
+  /* Fix product grid */
+  #product1 .pro-container {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px !important;
+    padding: 12px !important;
+  }
+
+  #product1 .pro img {
+    height: 200px !important;
+    object-fit: cover;
+  }
+
+  /* Fix blog page spacing */
+  #blog {
+    padding: 20px;
+  }
+
+  /* About page fix */
+  #about-head {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #about-head img {
+    width: 100% !important;
+  }
+
+  /* Contact page fix */
+  #contact-details {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  #contact-details .map {
+    width: 100% !important;
+  }
+
+  /* Cart fix */
+  #cart table td {
+    text-align: left !important;
+    padding: 8px 0 !important;
+  }
+
+  /* Footer fix */
+  footer {
+    text-align: center;
+    gap: 20px;
+  }
+}
+
+/* Small Phones Fix */
+@media (max-width: 420px) {
+  #product1 .pro-container {
+    grid-template-columns: 1fr !important;
+  }
+}
