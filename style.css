@@ -207,13 +207,20 @@ body{
 } */
 
 .fe-box img {
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
   /* object-fit: contain; */
-  margin-bottom: 10px;
+  margin-bottom:10px;
+  /* padding: 50px; */
 }
 .fe-box h6{
     color: brown;
+}
+#feature{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 #feature .fe-box h6{
     display: inline-block;
@@ -223,12 +230,7 @@ body{
     color: #088178;
     background-color: #fddde4;
 }
-#feature{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
+
 #product1{
     text-align: center;
 }
@@ -1357,3 +1359,4 @@ right:0px;
         display: none;
     }
 }
+
