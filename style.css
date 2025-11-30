@@ -1225,6 +1225,12 @@ width: 100%;
 #banner {
     height:40vh;
 }
+ #banner3 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 0 10px;
+    }
 #sm-banner .banner-box {
     height:40vh;
 }
@@ -1232,7 +1238,14 @@ width: 100%;
    margin-top: 20PX;
 }
 #banner3 .banner-box {
-    width:100%;
+    /* width:100%; */
+      #banner3 .banner-box {
+        width: 32%;   /* 3 boxes in a row */
+        margin: 0 0 15px 0;
+        height: 25vh;
+        background-size: cover;
+        background-position: center;
+    }
 }
 #newsletter {
 padding: 40PX 20PX;
