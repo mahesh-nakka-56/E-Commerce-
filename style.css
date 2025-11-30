@@ -1211,26 +1211,33 @@ h1{
 h2 {
     font-size:32px;
 }
-#feature .fe-box {
-    width: 155PX;
-  margin:0 0 15px 0;
-}
+
 #feature {
     
-    justify-content: space-between;
+    /* justify-content: space-between; */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 20px;
 }
+#feature .fe-box {
+    /* width: 155PX;
+  margin:0 0 15px 0; */
+        width: 48% !important;     /* force two boxes per row */
+        margin-bottom: 15px;
+    }
 #product1 .pro {
 width: 100%;
 }
 #banner {
     height:40vh;
 }
- #banner3 {
+ /* #banner3 {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         padding: 0 10px;
-    }
+    } */
 #sm-banner .banner-box {
     height:40vh;
 }
@@ -1238,14 +1245,14 @@ width: 100%;
    margin-top: 20PX;
 }
 #banner3 .banner-box {
-    /* width:100%; */
-      #banner3 .banner-box {
-        width: 32%;   /* 3 boxes in a row */
+    width:100%;
+      /* #banner3 .banner-box {
+        width: 32%;  
         margin: 0 0 15px 0;
         height: 25vh;
         background-size: cover;
         background-position: center;
-    }
+    } */
 }
 #newsletter {
 padding: 40PX 20PX;
