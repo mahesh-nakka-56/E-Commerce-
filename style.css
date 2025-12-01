@@ -1227,165 +1227,195 @@ padding-top:15px;
 }
 }
 
-@media(max-width:477px){
+@media(max-width:375px){
+
   .section-p1 {
-      padding:20PX;
-   }
-    #header {
-    padding:10px 30px;
-}
-#hero {
-     padding: 0 20px;
-    background-position: 55%;
-}
-h1{
-    font-size:36px;
-   
-}
-h2 {
-    font-size:32px;
+      padding:20px;
+  }
+
+  #header {
+      padding:10px 20px;
+  }
+
+  #hero {
+      padding: 0 20px;
+      background-position: center;
+      height: 60vh;
+  }
+
+  h1 { font-size: 34px; }
+  h2 { font-size: 28px; }
+
+  /* ----------------------------
+     FIXED FEATURE SECTION
+  ---------------------------- */
+  #feature {
+      display: flex !important;
+      flex-wrap: wrap !important;
+      justify-content: space-between !important;
+      padding: 20px !important;
+      gap: 12px !important;
+  }
+
+  #feature .fe-box {
+      width: 48% !important;      /* 2 per row */
+      max-width: 48% !important;
+      margin-bottom: 15px !important;
+      padding: 15px !important;
+      box-sizing: border-box !important;
+  }
+
+  /* ----------------------------
+      PRODUCTS
+  ---------------------------- */
+  #product1 .pro {
+      width: 100%;
+  }
+
+  /* ----------------------------
+      BANNER FIX
+  ---------------------------- */
+  #banner {
+      height: 30vh;
+      padding: 0 10px;
+      background-position: center;
+  }
+
+  #sm-banner .banner-box {
+      width: 100%;
+      height: 30vh;
+      padding: 20px;
+      background-position: center !important;
+      background-size: cover !important;
+  }
+
+  #sm-banner .banner-box2 {
+      width: 100%;
+      height: 30vh;
+      margin-top: 20px;
+  }
+
+  #banner3 {
+      padding: 0 10px;
+  }
+
+  #banner3 .banner-box {
+      width: 100% !important;
+      height: 22vh;
+      margin-bottom: 15px;
+      background-size: cover;
+      background-position: center;
+  }
+
+  /* ----------------------------
+      NEWSLETTER
+  ---------------------------- */
+  #newsletter {
+      padding: 30px 20px;
+  }
+
+  #newsletter .form {
+      width: 100%;
+  }
+
+  /* ----------------------------
+      SINGLE PRODUCT PAGE
+  ---------------------------- */
+  #prodetails {
+      flex-direction: column;
+  }
+  #prodetails .single-pro-image,
+  #prodetails .single-pro-details {
+      width: 100%;
+      margin-right: 0;
+  }
+
+  /* ----------------------------
+      BLOG PAGE
+  ---------------------------- */
+  #blog {
+      padding: 80px 20px 0 20px;
+  }
+
+  #blog .blog-box {
+      flex-direction: column;
+  }
+
+  #blog .blog-img {
+      width: 100%;
+      margin-bottom: 20px;
+  }
+
+  #blog .blog-details {
+      width: 100%;
+  }
+
+  /* ----------------------------
+      ABOUT PAGE
+  ---------------------------- */
+  #about-head {
+      flex-direction: column;
+  }
+  #about-head img {
+      width: 100%;
+  }
+
+  #about-head div {
+      padding-left: 0;
+  }
+
+  #about-app .video {
+      width: 100%;
+  }
+
+  /* ----------------------------
+      CONTACT PAGE
+  ---------------------------- */
+  #contact-details {
+      flex-direction: column;
+  }
+  #contact-details .details,
+  #contact-details .map {
+      width: 100%;
+  }
+
+  #form-details {
+      flex-wrap: wrap;
+      padding: 20px;
+  }
+  #form-details form {
+      width: 100%;
+  }
+
+  /* ----------------------------
+      CART PAGE
+  ---------------------------- */
+  #cart-add {
+      flex-direction: column;
+  }
+  #coupon, #subtotal {
+      width: 100%;
+  }
+
 }
 
-  /* #feature {
-        justify-content: space-between;
-        padding: 20px;
-    }
+/* NOW PASTE THIS AT THE END */
+@media (max-width: 480px) {
 
-    #feature .fe-box {
-        width: 48% !important; 
-        margin-bottom: 15px;
-    } */
-     /* --- FORCE FEATURE SECTION LAYOUT --- */
     #feature {
         display: flex !important;
         flex-wrap: wrap !important;
         justify-content: space-between !important;
+        gap: 12px !important;
+        padding: 20px !important;
     }
 
     #feature .fe-box {
-        width: 48% !important;       /* 2 per row */
+        width: 48% !important;
         max-width: 48% !important;
-        margin-bottom: 15px !important;
-        box-sizing: border-box !important;
+        min-width: 48% !important;
+        margin: 0 !important;
+        padding: 15px !important;
     }
-
-#product1 .pro {
-width: 100%;
-}
-#banner {
-    height:40vh;
-}
- /* #banner3 {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        padding: 0 10px;
-    } */
-#sm-banner .banner-box {
-    height:40vh;
-}
-#sm-banner .banner-box2{
-   margin-top: 20PX;
-}
-#banner3 .banner-box {
-    width:100%;
-      /* #banner3 .banner-box {
-        width: 32%;  
-        margin: 0 0 15px 0;
-        height: 25vh;
-        background-size: cover;
-        background-position: center;
-    } */
-}
-#newsletter {
-padding: 40PX 20PX;
-}
-#newsletter .form {
-    width:100%;
-}
-footer .copyright{
-    text-align: start;
 }
 
-/* single products */
-#prodetails{
-    display: flex;
-    flex-direction: column;
-}
-#prodetails .single-pro-image{
-    width: 100%;
-    margin-right: 0px;
-}
-#prodetails .single-pro-details{
-    width: 100%;
-}
-
-/* Blog page */
-
-#blog{
-    padding: 100px 20px 0 20px;
-}
-#blog .blog-box {
-    display: flex;
-    flex-direction: column;
-    align-items:flex-start;
-}
-#blog .blog-img{
-    width: 100%;
-    margin-right: 0px;
-    margin-bottom: 30px;
-}
-#blog .blog-details{
-    width: 100%;
-}
-
-/* About Page */
-
-#about-head{
-    flex-direction: column;
-}
-#about-head img{
-    width:100%;
-    margin-bottom: 20px;
-}
-#about-head div{
-    padding-left: 0px;
-}
-#about-app .video{
-    width: 100%;
-}
-
-/* contact page */
-
-#contact-details{
-    flex-direction: column;
-}
-#contact-details .details{
-    width: 100%;
-}
-#contact-details .map{
-    width: 100%;
-}
-#form-details{
-    margin-top: 10px;
-    padding: 30px 10px;
-    flex-wrap: wrap;
-}
-#form-details form{
-    width: 100%;
-    margin-top: 30px;
-}
-
-/* cart page */
-
-#cart-add{
-    flex-direction: column;
-}
-#coupon{
-    width:100%;
-}
-#subtotal{
-    width: 100%;
-    padding: 20px;
-}
-}
