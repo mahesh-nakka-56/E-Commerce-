@@ -184,7 +184,21 @@ body{
      color:#088178;
      background-color:white;
 }
- 
+ .explore-btn {
+    display: inline-block;       /* Makes it behave like a button */
+    padding: 12px 25px;          /* Space inside the button */
+    background-color:#088178;  /* Blue background */
+    color: white;                /* Text color */
+    text-decoration: none;       /* Remove underline */
+    border-radius: 5px;          /* Rounded corners */
+    font-weight: bold;           /* Bold text */
+    transition: background 0.3s; /* Smooth hover effect */
+}
+
+.explore-btn:hover {
+    background-color: #0056b3;   /* Darker blue on hover */
+}
+
 /* #feature {
     display: flex;
     justify-content: space-between;

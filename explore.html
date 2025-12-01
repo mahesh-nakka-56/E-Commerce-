@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore More</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Extra styling only for explore page */
+        #explore-hero {
+            background-image: url('./IMAGES/explore-banner.jpg'); /* Change this if needed */
+            width: 100%;
+            height: 50vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 20px;
+        }
+
+        #explore-hero h1 {
+            font-size: 48px;
+            font-weight: 700;
+        }
+
+        #explore-info {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        #explore-info h2 {
+            margin-bottom: 10px;
+        }
+
+        #explore-products {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 40px 20px;
+        }
+
+        .explore-product-box {
+            width: 260px;
+            background: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .explore-product-box img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <!-- HERO SECTION -->
+    <section id="explore-hero">
+        <h1>Welcome to Explore Page</h1>
+    </section>
+
+    <!-- INFO SECTION -->
+    <section id="explore-info">
+        <h2>Discover More Features & Products</h2>
+        <p>Here you can explore more products, offers, banners and details about our store.</p>
+    </section>
+
+    <!-- DEMO PRODUCTS -->
+    <section id="explore-products">
+        <div class="explore-product-box">
+            <img src="./IMAGES/f1.png" alt="">
+            <h3>Product One</h3>
+            <p>Sample description of the product.</p>
+        </div>
+
+        <div class="explore-product-box">
+            <img src="./IMAGES/f2.png" alt="">
+            <h3>Product Two</h3>
+            <p>Explore more items here.</p>
+        </div>
+
+        <div class="explore-product-box">
+            <img src="./IMAGES/f3.png" alt="">
+            <h3>Product Three</h3>
+            <p>Good quality products.</p>
+        </div>
+    </section>
+
+</body>
+</html>
