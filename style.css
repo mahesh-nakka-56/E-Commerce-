@@ -185,23 +185,12 @@ body{
      background-color:white;
 }
  
-#feature {
+/* #feature {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 20px;
 }
-
-/* #feature .fe-box {
-    width: 22%; 
-    min-width: 200px;
-    text-align: center;
-    background: #fff;
-    padding: 20px;
-    border-radius: 20px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-
-} */
 
 #feature .fe-box {
     width: 160px;
@@ -232,7 +221,48 @@ body{
     transform: translateY(-5px);
     transition: 0.3s;
     box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+} */
+
+/* FEATURE SECTION (DESKTOP) */
+#feature {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 40px 80px;
 }
+
+#feature .fe-box {
+    width: 15%; 
+    min-width: 140px;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #cce7d0;
+    border-radius: 10px;
+    background: #fff;
+    transition: 0.3s;
+}
+
+#feature .fe-box img {
+    width: 100%;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+#feature .fe-box h6 {
+    background: #fddde4;
+    padding: 6px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #088178;
+}
+
+#feature .fe-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
 #product1{
     text-align: center;
 }
@@ -1164,8 +1194,12 @@ padding-top:15px;
     justify-content: space-between;
     flex-wrap: wrap;   /* important */
 }
-#feature .fe-box {
+/* #feature .fe-box {
   margin:15px 15px;
+} */
+#feature .fe-box {
+    width: 30%;
+    min-width: 180px;
 }
 
 #product1 .pro-container {
@@ -1212,20 +1246,29 @@ h2 {
     font-size:32px;
 }
 
-#feature {
-    
-    /* justify-content: space-between; */
-        display: flex;
-        flex-wrap: wrap;
+  /* #feature {
         justify-content: space-between;
         padding: 20px;
-}
-#feature .fe-box {
-    /* width: 155PX;
-  margin:0 0 15px 0; */
-        width: 48% !important;     /* force two boxes per row */
-        margin-bottom: 15px;
     }
+
+    #feature .fe-box {
+        width: 48% !important; 
+        margin-bottom: 15px;
+    } */
+     /* --- FORCE FEATURE SECTION LAYOUT --- */
+    #feature {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: space-between !important;
+    }
+
+    #feature .fe-box {
+        width: 48% !important;       /* 2 per row */
+        max-width: 48% !important;
+        margin-bottom: 15px !important;
+        box-sizing: border-box !important;
+    }
+
 #product1 .pro {
 width: 100%;
 }
